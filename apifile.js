@@ -82,7 +82,7 @@ app.get('/Employee', (req, res) =>
     }
     if(req.query.emp_name)
     {
-       sql='select * from employees where emp_name =?';
+       sql=' select * from Employee where emp_name =?';
        connection.query(sql,[req.query.emp_name],(err,data) =>{
            if(err)
            {
@@ -94,7 +94,7 @@ app.get('/Employee', (req, res) =>
     
     if(req.query.emp_city)
     {
-       sql='select * from employees where emp_city =?';
+       sql='select * from Employee where emp_city =?';
        connection.query(sql,[req.query.emp_city],(err,data) =>{
            if(err)
            {
@@ -131,7 +131,7 @@ app.get('/Training', (req, res) =>
     }
     if(req.query.syllabus)
     {
-       sql='select * from employees where syllabus =?';
+       sql='select * from Training where syllabus =?';
        connection.query(sql,[req.query.syllabus],(err,data) =>{
            if(err)
            {
